@@ -1,0 +1,148 @@
+:root {
+  --form-control-color: $swatch_3;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
+  background: linear-gradient(-45deg, #aecaff, #6495ED);
+  background-size: 400%, 400%;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  color: #dce0e3;
+}
+
+body {
+  max-width: 50%;
+  align-self: center;
+  text-align: center;
+  justify-content: center;
+  margin: 0 auto;
+  margin-top: 1rem;
+}
+
+#main-container {
+  background-color: #3d434b;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  grid-auto-rows: minmax(100px, auto);
+  border-radius: 10px;
+}
+#main-container #header {
+  grid-column: 1/4;
+  grid-row: 1;
+  text-align: center;
+}
+#main-container #header h1 {
+  border-bottom: 0.1rem solid #aecaff;
+  margin: 0.5rem;
+  padding-bottom: 0.5rem;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+#main-container #header h2 {
+  text-transform: uppercase;
+}
+#main-container #header span {
+  font-size: inherit;
+  font-weight: bold;
+}
+#main-container #game-body {
+  display: grid;
+  grid-column: 1/4;
+  perspective: 30em;
+  margin: 0rem 2rem 2rem 2rem;
+}
+#main-container #game-body #dif-easy {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+}
+#main-container #game-body #dif-medium {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+}
+#main-container #game-body #dif-hard {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(6, 1fr);
+}
+#main-container #game-body #dif-easy .card,
+#main-container #game-body #dif-medium .card,
+#main-container #game-body #dif-hard .card {
+  width: 150px;
+  height: 150px;
+  margin: 0 auto;
+  margin-bottom: 1rem;
+  transition: transform 0.5s;
+  transform-style: preserve-3d;
+}
+#main-container #game-body #dif-easy .card .face,
+#main-container #game-body #dif-medium .card .face,
+#main-container #game-body #dif-hard .card .face {
+  width: 100%;
+  height: 100%;
+  color: #FFF;
+  line-height: 15em;
+  text-align: center;
+  position: absolute;
+  margin-left: -50%;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+}
+#main-container #game-body #dif-easy .card .front,
+#main-container #game-body #dif-medium .card .front,
+#main-container #game-body #dif-hard .card .front {
+  border-radius: 1rem;
+  background-color: #aecaff;
+  background-image: url("/images/cardFront.svg");
+}
+#main-container #game-body #dif-easy .card .back,
+#main-container #game-body #dif-medium .card .back,
+#main-container #game-body #dif-hard .card .back {
+  border-radius: 1rem;
+  background-color: #333;
+  transform: rotateY(180deg);
+  background-position: center;
+  background-size: 150px 150px;
+}
+#main-container #game-body #dif-easy .card:hover,
+#main-container #game-body #dif-medium .card:hover,
+#main-container #game-body #dif-hard .card:hover {
+  outline: 5px solid #6495ED;
+  border-radius: 1rem;
+}
+#main-container #game-body #dif-easy .flip,
+#main-container #game-body #dif-medium .flip,
+#main-container #game-body #dif-hard .flip {
+  transform: rotateY(180deg);
+}
+
+.difficultyBtn {
+  text-align: center;
+  height: 3rem;
+  width: 6rem;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  background-color: transparent;
+  border: 0.1rem solid;
+  color: #dce0e3;
+}
+.difficultyBtn:hover {
+  border: 0.2rem solid #aecaff;
+}
+
+footer p {
+  color: #3d434b;
+}
+footer span {
+  color: red;
+}/*# sourceMappingURL=style.css.map */

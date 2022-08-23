@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
+    <!-- TITLE -->
+    <title>Memory Game</title>
+    <!-- STYLESHEETS -->
+    <link rel="stylesheet" href="/Sass/style.css">
+    <!-- SCRIPTS -->
+    <script type="module" src="/scripts/flipCardScript.js" defer></script>
+    <script type="module" src="/scripts/imageGen.js" defer></script>
+    <script type="module" src="/scripts/GameGen.js" defer></script>
+    <script type="module" src="/scripts/radioButtons.js" defer></script>
+</head>
+<body>
+    <div id="main-container">
+        <div id="header">
+            <h1 class="title">Memory Game</h1>
+            <h2 id="lives" class="lives">Lives : <span id="livesNum"></span></h2>
+        </div>
+        <section id="game-body">
+            <h2>Select difficulty to begin</h2>
+            <div>
+            <button class="difficultyBtn" value="easy">Easy</button>
+            <button class="difficultyBtn" value="medium">Medium</button>
+            <button class="difficultyBtn" value="hard">Hard</button>
+            </div>            
+        </section>
+    </div>
+
+    <footer>
+        <p>Made with <span>♥</span> by <a href="https://github.com/HeroldKiraly">Herold Kiraly</a></p>
+    </footer>
+</body>
+</html>

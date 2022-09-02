@@ -1,12 +1,9 @@
-import { createGame } from "./GameGen.js";
 import { eCardNum , mCardNum , hCardNum } from "./GameGen.js";
 import { images } from "./imageArray.js";
 
-console.log('imageGen.js LOADED');
-
-let cardBack;
-
+// GENERATES IMAGES BASED ON DIFFICULTY SELECTION
 const imageGenerator = (difficulty) => {
+    let cardBack;
     if (difficulty === 'easy') {
         let easyImages = [];
 
@@ -71,6 +68,4 @@ const imageGenerator = (difficulty) => {
         }
     }
 }
-
-
 export { imageGenerator };

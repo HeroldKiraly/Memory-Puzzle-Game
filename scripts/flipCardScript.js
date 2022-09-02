@@ -1,15 +1,13 @@
-console.log('flipCardScript.js LOADED');
-
 import { lives } from './GameGen.js';
 
 const runFunction = () => {
-
-//VARIABLES
+  //VARIABLES
   const cards = document.querySelectorAll('.card');
   let hasFlippedCard = false;
   let lockCards = false;
   let firstCard, secondCard;
 
+  // REVEALS CARDS FOR THE FIRST TIME
   function initialFlip() {
     lockCards = true;
     for (let i = 0; i < cards.length; i++) {
@@ -25,11 +23,11 @@ const runFunction = () => {
   }
   initialFlip();
 
-//FLIPS CARD ON CLICK AND ASSIGNS IT TO VARIABLE
+  //FLIPS CARD ON CLICK AND ASSIGNS IT TO VARIABLE
   function flipCard() {
     console.log('clicked card');
     if (lockCards) return;
-    this.classList.add('flip'); 
+    this.classList.add('flip');
 
     if (!hasFlippedCard) {
       hasFlippedCard = true;
@@ -43,7 +41,7 @@ const runFunction = () => {
     checkForMatch();
   }
 
-//CHECK FOR MATCHING CARDS
+  //CHECK FOR MATCHING CARDS
   function checkForMatch() {
     if (firstCard.lastElementChild.src === secondCard.lastElementChild.src) {
       console.log('Its a Match');
@@ -68,13 +66,13 @@ const runFunction = () => {
     
   }
 
-//DISABLES MATCHED CARDS FROM FLIPPING BACK TO DEFAULT
+  //DISABLES MATCHED CARDS FROM FLIPPING BACK TO DEFAULT
   function disableCards() {
     firstCard.removeEventListener('click', flipCard);
     secondCard.removeEventListener('click', flipCard);
   }
 
-//FLIPS CARDS BACK THAT ARE NOT A MATCH
+  //FLIPS CARDS BACK THAT ARE NOT A MATCH
   function unflipCards() {
     lockCards = true;
 
@@ -86,9 +84,7 @@ const runFunction = () => {
     }, 1000);
   }
 
-//ADDS EVENT LISTENER TO CARDS
+  //ADDS EVENT LISTENER TO CARDS
   cards.forEach(card => card.addEventListener('click', flipCard));
 };
-
-
 export { runFunction };

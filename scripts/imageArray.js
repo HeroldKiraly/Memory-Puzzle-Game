@@ -1,5 +1,4 @@
-console.log('imageArray.js LOADED');
-
+//RANDOM IMAGES ARRAY USING PICSUM
 const images = [
     'https://picsum.photos/200?random=1',
     'https://picsum.photos/200?random=2', 
@@ -17,5 +16,4 @@ const images = [
     'https://picsum.photos/200?random=14', 
     'https://picsum.photos/200?random=15',
 ];
-
 export { images };

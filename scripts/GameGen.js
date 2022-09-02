@@ -1,7 +1,5 @@
 import { runFunction } from './flipCardScript.js';
 
-console.log('GameGen.js LOADED');
-
 //GLOBAL VARIABLES
 let eCardNum = 12;
 let mCardNum = 20
@@ -101,7 +99,5 @@ const createGame = (difficulty) => {
     }
     runFunction();
 };
-
-
 export { createGame };
 export { eCardNum , mCardNum , hCardNum , lives};
